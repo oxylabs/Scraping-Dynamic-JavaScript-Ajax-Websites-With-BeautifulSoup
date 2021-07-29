@@ -205,7 +205,7 @@ for element in elements:
     print(element.text)
 ```
 
-*Note: The complete code is in [selenium_example.py](code/selenium_example.py) code file.*
+*Note: The complete code is in [selenium_example.py](https://github.com/oxylabs/Scraping-Dynamic-JavaScript-Ajax-Websites-With-BeautifulSoup/blob/main/selenium_example.py) code file.*
 
 However, if you are already comfortable with BeautifulSoup, you can create the Beautiful Soup object.
 
@@ -241,7 +241,7 @@ author_element = soup.find("small", class_="author")
 print(author_element.text)
 ```
 
-*Note: The complete source code is in [selenium_bs4.py](code/selenium_bs4.py)*
+*Note: The complete source code is in [selenium_bs4.py](https://github.com/oxylabs/Scraping-Dynamic-JavaScript-Ajax-Websites-With-BeautifulSoup/blob/main/selenium_bs4.py)*
 
 ### Headless `Browser`
 
@@ -326,7 +326,7 @@ The output will be the python object:
 
 This list can not be converted to any format as required. Also, note that each item contains a link to the author page. It means that you can read these links and create a spider to get data from all these pages.
 
-This complete code is included in [data_in_same_page.py](code/data_in_same_page.py).
+This complete code is included in [data_in_same_page.py](https://github.com/oxylabs/Scraping-Dynamic-JavaScript-Ajax-Websites-With-BeautifulSoup/blob/main/data_in_same_page.py).
 
 ### Data In Other Pages
 
