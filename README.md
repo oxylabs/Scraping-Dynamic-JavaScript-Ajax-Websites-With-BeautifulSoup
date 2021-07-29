@@ -266,7 +266,7 @@ Finally, send this object while creating the Chrome instance.
 driver = Chrome(executable_path='c:/driver/chromedriver.exe', options=options)
 ```
 
-Now when you run the script, the browser will not be visible. See [selenium_bs4_headless.py](code/selenium_bs4_headless.py) file for the complete implementation.
+Now when you run the script, the browser will not be visible. See [selenium_bs4_headless.py](https://github.com/oxylabs/Scraping-Dynamic-JavaScript-Ajax-Websites-With-BeautifulSoup/blob/main/selenium_bs4_headless.py) file for the complete implementation.
 
 ## Web Scraping Dynamic Sites by Locating AJAX Calls
 
