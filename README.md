@@ -132,7 +132,7 @@ The basic skeleton of the Python script to launch a browser, load the page, and 
 ```python
 from selenium.webdriver import Chrome
 
-driver = Chrome(executable_path='c:/driver/chromedriver.exe')
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
 driver.get('https://quotes.toscrape.com/js/')
 #
 # Code to read data from HTML here
@@ -161,8 +161,8 @@ This is a `small` element with its `class` attribute set to `author`.
 Selenium allows various methods to locate the HTML elements. These methods are part of the driver object. Some of the methods that can be useful here are as follows:
 
 ```python
-element = driver.find_element_by_class_name("author")
-element = driver.find_element_by_tag_name("small")
+element = driver.find_element(By.CLASS_NAME, "author")
+element = driver.find_element(By.TAG_NAME, "small")
 ```
 
 There are few other methods, may be useful for other scenario. These methods are as follows:
@@ -181,7 +181,7 @@ Let's modify the code so that the first author can be printed.
 
 ```python
 from selenium.webdriver import Chrome
-driver = Chrome(executable_path='c:/driver/chromedriver.exe')
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
 driver.get('https://quotes.toscrape.com/js/')
 
 element = driver.find_element_by_class_name("author")
@@ -224,7 +224,7 @@ The following part remains unchanged from the previous example.
 
 ```python
 from selenium.webdriver import Chrome
-driver = Chrome(executable_path='c:/driver/chromedriver.exe')
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
 driver.get('https://quotes.toscrape.com/js/')
 ```
 
