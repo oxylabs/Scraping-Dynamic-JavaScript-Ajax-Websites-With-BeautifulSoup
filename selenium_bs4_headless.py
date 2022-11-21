@@ -7,7 +7,7 @@ options = ChromeOptions()
 options.headless = True
 
 # update executable_path as required
-driver = Chrome(ChromeDriverManager().install())
+driver = Chrome(ChromeDriverManager().install(), options=options)
 
 driver.get('https://quotes.toscrape.com/js/')
 
