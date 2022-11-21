@@ -1,7 +1,8 @@
 from selenium.webdriver import Chrome
+from webdriver_manager.chrome import ChromeDriverManager
 
 # update executable_path as required
-driver = Chrome(executable_path='c:/driver/chromedriver.exe')
+driver = Chrome(ChromeDriverManager().install())
 
 driver.get('https://quotes.toscrape.com/js/')
 
