@@ -226,8 +226,8 @@ The following part remains unchanged from the previous example.
 
 ```python
 from selenium.webdriver import Chrome
-from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from bs4 import BeautifulSoup
 
 driver = Chrome(ChromeDriverManager().install())
 driver.get('https://quotes.toscrape.com/js/')
