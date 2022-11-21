@@ -131,16 +131,15 @@ The basic skeleton of the Python script to launch a browser, load the page, and 
 
 ```python
 from selenium.webdriver import Chrome
+from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
+driver = Chrome(ChromeDriverManager().install())
 driver.get('https://quotes.toscrape.com/js/')
 #
 # Code to read data from HTML here
 #
 driver.quit()
 ```
-
-The `executable_path` is the complete path of the driver. On Windows, backslashes need to be changed to forward slashes.
 
 Now that we can load the page in the browser, let's look into extracting specific elements. There are two ways to extract elements—Selenium and Beautiful Soup.
 
@@ -182,8 +181,9 @@ Let's modify the code so that the first author can be printed.
 ```python
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
+driver = Chrome(ChromeDriverManager().install())
 driver.get('https://quotes.toscrape.com/js/')
 
 element = driver.find_element(By.CLASS_NAME, "author")
@@ -227,8 +227,9 @@ The following part remains unchanged from the previous example.
 ```python
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
+driver = Chrome(ChromeDriverManager().install())
 driver.get('https://quotes.toscrape.com/js/')
 ```
 
@@ -267,7 +268,7 @@ options.headless = True
 Finally, send this object while creating the Chrome instance.
 
 ```python
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
+driver = Chrome(ChromeDriverManager().install(), options=options)
 ```
 
 Now when you run the script, the browser will not be visible. See [selenium_bs4_headless.py](https://github.com/oxylabs/Scraping-Dynamic-JavaScript-Ajax-Websites-With-BeautifulSoup/blob/main/selenium_bs4_headless.py) file for the complete implementation.
