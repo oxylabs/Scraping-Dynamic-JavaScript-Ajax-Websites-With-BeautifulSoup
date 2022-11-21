@@ -1,4 +1,5 @@
 from selenium.webdriver import Chrome, ChromeOptions
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 
 # Hide the browser
@@ -6,7 +7,7 @@ options = ChromeOptions()
 options.headless = True
 
 # update executable_path as required
-driver = Chrome(executable_path='c:/driver/chromedriver.exe', options=options)
+driver = Chrome(ChromeDriverManager().install())
 
 driver.get('https://quotes.toscrape.com/js/')
 
