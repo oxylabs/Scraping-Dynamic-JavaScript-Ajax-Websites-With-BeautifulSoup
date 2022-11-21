@@ -168,23 +168,25 @@ element = driver.find_element(By.TAG_NAME, "small")
 There are few other methods, may be useful for other scenario. These methods are as follows:
 
 ```python
-element = driver.find_element_by_id("abc")
-element = driver.find_element_by_link_text("abc")
-element = driver.find_element_by_xpath("//abc")
-element = driver.find_element_by_css_selector(".abc")
+element = driver.find_element(By.ID, "abc")
+element = driver.find_element(By.LINK_TEXT, "abc")
+element = driver.find_element(By.XPATH, "//abc")
+element = driver.find_element(By.CSS_SELECTOR, ".abc")
 
 ```
 
-Perhaps the most useful methods are `find_element_by_css_selector` and `find_element_by_xpath`. Any of these two methods should be able to select most of the scenarios.
+Perhaps the most useful methods are `find_element(By.CSS_SELECTOR)` and `find_element(By.XPATH)`. Any of these two methods should be able to select most of the scenarios.
 
 Let's modify the code so that the first author can be printed.
 
 ```python
 from selenium.webdriver import Chrome
+from selenium.webdriver.common.by import By
+
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
 driver.get('https://quotes.toscrape.com/js/')
 
-element = driver.find_element_by_class_name("author")
+element = driver.find_element(By.CLASS_NAME, "author")
 
 print(element.text)
 driver.quit()
@@ -195,7 +197,7 @@ What if you want to print all the authors?
 All the `find_element` methods have a counterpart - `find_elements` . Note the pluralization. To find all the authors, simply change one line:
 
 ```python
-elements = driver.find_elements_by_class_name("author")
+elements = driver.find_elements(By.CLASS_NAME, "author")
 ```
 
 This returns a list of elements. We can simply run a loop to print all the authors:
@@ -224,6 +226,8 @@ The following part remains unchanged from the previous example.
 
 ```python
 from selenium.webdriver import Chrome
+from selenium.webdriver.common.by import By
+
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
 driver.get('https://quotes.toscrape.com/js/')
 ```
@@ -263,7 +267,7 @@ options.headless = True
 Finally, send this object while creating the Chrome instance.
 
 ```python
-driver = Chrome(executable_path='c:/driver/chromedriver.exe', options=options)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
 ```
 
 Now when you run the script, the browser will not be visible. See [selenium_bs4_headless.py](https://github.com/oxylabs/Scraping-Dynamic-JavaScript-Ajax-Websites-With-BeautifulSoup/blob/main/selenium_bs4_headless.py) file for the complete implementation.
