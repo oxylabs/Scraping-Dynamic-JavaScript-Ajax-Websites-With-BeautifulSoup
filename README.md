@@ -4,6 +4,8 @@
 
 [<img src="https://img.shields.io/static/v1?label=&message=Python&color=blueviolet" />](https://github.com/topics/python) [<img src="https://img.shields.io/static/v1?label=&message=JavaScript&color=blue" />](https://github.com/topics/javascript)
 
+[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
+
 ## Table of contents
 
 - [Revisiting BeautifulSoup and Requests](#revisiting-beautifulsoup-and-requests)
