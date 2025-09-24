@@ -4,7 +4,7 @@
 
 [<img src="https://img.shields.io/static/v1?label=&message=Python&color=blueviolet" />](https://github.com/topics/python) [<img src="https://img.shields.io/static/v1?label=&message=JavaScript&color=blue" />](https://github.com/topics/javascript)
 
-[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
+[![](https://dcbadge.limes.pink/api/server/Pds3gBmKMH?style=for-the-badge&theme=discord)](https://discord.gg/Pds3gBmKMH) [![YouTube](https://img.shields.io/badge/YouTube-Oxylabs-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@oxylabs)
 
 ## Table of contents
 
