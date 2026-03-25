@@ -14,7 +14,7 @@
 - [Scraping Dynamic Web Pages With Selenium](#scraping-dynamic-web-pages-with-selenium)
   - [Finding Elements Using Selenium](#finding-elements-using-selenium)
   - [Finding Elements Using BeautifulSoup](#finding-elements-using-beautifulsoup)
-  - [Headless `Browser`](#headless-browser)
+  - [Headless browser](#headless-browser)
 - [Web Scraping Dynamic Sites by Locating AJAX Calls](#web-scraping-dynamic-sites-by-locating-ajax-calls)
   - [Data Embedded In the Same Page](#data-embedded-in-the-same-page)
   - [Data In Other Pages](#data-in-other-pages)
@@ -252,7 +252,7 @@ print(author_element.text)
 
 *Note: The complete source code is in [selenium_bs4.py](https://github.com/oxylabs/Scraping-Dynamic-JavaScript-Ajax-Websites-With-BeautifulSoup/blob/main/selenium_bs4.py)*
 
-### Headless `Browser`
+### Headless browser
 
 Once the script is ready, there is no need for the browser to be visible when the script is running. The browser can be hidden, and the script will still run fine. This behavior of a browser is also known as a headless browser.
 
